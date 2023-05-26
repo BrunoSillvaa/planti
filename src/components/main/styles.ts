@@ -202,6 +202,7 @@ export const Container = styled.div`
           flex-direction: column;
           justify-content: end;
           position: relative;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 3px 6px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
           .icon {
             position: absolute;
@@ -400,13 +401,15 @@ export const Container = styled.div`
     .my-stat {
       grid-column: 2;
       grid-row: 1;
-      padding: 10px 20px;
+      padding: 10px 40px 10px 20px;
       border-radius: 18px;
-      width: max-content;
-      background-color: lightyellow;
+      width: 90%;
+      background: #cccccc80;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      position: relative;
+      justify-self: center;
 
       h3 {
         font-weight: 600;
@@ -414,12 +417,29 @@ export const Container = styled.div`
 
       .stats {
         display: flex;
-        gap: 30px;
+        justify-content: space-between;
+        gap: 20px;
 
         .today-stat {
           display: flex;
           flex-direction: column;
-          align-items: start;
+          align-items: center;
+          font-size: 14px;
+          font-weight: 600;
+          letter-spacing: -0.5px;
+
+          strong {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            color: green;
+          }
+        }
+
+        .week-stat {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           font-size: 14px;
           font-weight: 600;
           letter-spacing: -0.5px;
@@ -435,11 +455,11 @@ export const Container = styled.div`
         .month-stat {
           display: flex;
           flex-direction: column;
-          align-items: start;
+          align-items: center;
           font-size: 14px;
           font-weight: 600;
           letter-spacing: -0.5px;
-
+          
           strong {
             font-size: 10px;
             font-weight: 600;
@@ -447,6 +467,14 @@ export const Container = styled.div`
             color: green;
           }
         }
+      }
+
+      hr {
+        height: 100%;
+        width: 4px;
+        border: none;
+        border-radius: 24px;
+        background-color: #CCC;
       }
 
       button {
@@ -460,7 +488,16 @@ export const Container = styled.div`
         background: transparent;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        gap: 10px;
+        align-self: center;
+      }
+
+      img {
+        width: 100px;
+        position: absolute;
+        bottom: 0;
+        right: -50px;
+        z-index: 2;
       }
     }
 

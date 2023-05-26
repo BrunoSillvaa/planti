@@ -8,6 +8,8 @@ import User4 from '../../assets/user4.jpg'
 import User5 from '../../assets/user5.jpg'
 import Video from '../../assets/video.mp4'
 
+import Plantbg from '../../assets/plantbg.png'
+
 import Montera from '../../assets/plants/montera.png'
 import Articial from '../../assets/plants/artificial.png'
 import Plant from '../../assets/plants/plant.png'
@@ -157,6 +159,11 @@ export default function Main() {
             <p className='today-stat'>
               Today <strong>4 Orders</strong>
             </p>
+            <hr />
+            <p className='week-stat'>
+              This Week <strong>26 Orders</strong>
+            </p>
+            <hr />
             <p className='month-stat'>
               This Month <strong>175 Orders</strong>
             </p>
@@ -165,6 +172,7 @@ export default function Main() {
             Go to my order
             <RiArrowRightLine className='icon' />
           </button>
+          <img src={Plantbg} />
         </div>
 
         <div className='recent-activity'>
@@ -187,28 +195,28 @@ export default function Main() {
               <img src={User1} alt='User Foto' />
               <p className='user-name'>Amanda Silva</p>
               <p className='order'>Ordered a new plant</p>
-              <p className='time'>2 min ago</p>
+              <p className='time'>5 min ago</p>
             </div>
 
             <div className='user'>
               <img src={User2} alt='User Foto' />
               <p className='user-name'>Henrique Santos</p>
               <p className='order'>Ordered a new plant</p>
-              <p className='time'>2 min ago</p>
+              <p className='time'>23 min ago</p>
             </div>
 
             <div className='user'>
               <img src={User3} alt='User Foto' />
               <p className='user-name'>Gustavo Oliveira</p>
               <p className='order'>Ordered a new plant</p>
-              <p className='time'>2 min ago</p>
+              <p className='time'>1 hour ago</p>
             </div>
 
             <div className='user'>
               <img src={User4} alt='User Foto' />
               <p className='user-name'>Gabriela Souza</p>
               <p className='order'>Ordered a new plant</p>
-              <p className='time'>2 min ago</p>
+              <p className='time'>2 hour ago</p>
             </div>
           </div>
         </div>
