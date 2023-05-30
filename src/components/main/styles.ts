@@ -2,28 +2,39 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 100%;
+  height: 100%;
 
   header {
     width: 100%;
-    padding: 10px 20px;
+    padding: 15px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 721px) {
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px;
+    }
 
     .welcome {
       display: flex;
       flex-direction: column;
       align-items: center;
 
+      @media (max-width: 721px) {
+        gap: 10px;
+      }
+
       h2 {
-        font-size: 24px;
+        font-size: 28px;
         font-weight: 700;
         letter-spacing: -0.5px;
       }
 
       p {
         color: #00000090;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 500;
         letter-spacing: -0.5px;
       }
@@ -33,17 +44,18 @@ export const Container = styled.div`
       display: flex;
       align-items: center;
       background: White;
-      padding: 5px 20px;
+      padding: 8px 25px;
       border-radius: 18px;
 
       input {
         border: none;
         outline: none;
         font-weight: 500;
+        font-size: 16px;
       }
 
       .icon {
-        font-size: 20px;
+        font-size: 24px;
         transition: all 0.2s ease;
         cursor: pointer;
 
@@ -56,11 +68,11 @@ export const Container = styled.div`
     .user {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 30px;
 
       .icon {
         color: #00000080;
-        font-size: 30px;
+        font-size: 35px;
         transition: all 0.2s ease;
         cursor: pointer;
 
@@ -70,7 +82,7 @@ export const Container = styled.div`
       }
 
       .user-ft {
-        width: 40px;
+        width: 45px;
         border-radius: 16px;
         transition: all 0.2s ease;
         cursor: pointer;
@@ -83,10 +95,16 @@ export const Container = styled.div`
   }
 
   main {
-    padding: 15px 20px;
+    padding: 15px 25px;
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-gap: 15px 10px;
+    grid-gap: 40px 20px;
+
+    @media (max-width: 721px) {
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+    }
 
     .explore {
       display: flex;
@@ -95,10 +113,16 @@ export const Container = styled.div`
       position: relative;
       grid-column: 1;
       grid-row: 1;
-      height: 150px;
+      height: 200px;
       padding: 0 15px;
-      gap: 5px;
+      gap: 10px;
       z-index: 1;
+
+      @media (max-width: 721px) {
+        height: auto;
+        width: 100%;
+        padding: 15px;
+      }
 
       .video-wrapper {
         position: absolute;
@@ -121,26 +145,31 @@ export const Container = styled.div`
       h3 {
         color: White;
         font-weight: 600;
+        font-size: 22px;
         letter-spacing: -0.4px;
       }
 
       p {
         color: White;
         font-weight: 400;
-        font-size: 12px;
+        font-size: 16px;
         letter-spacing: -0.4px;
       }
 
       .buttons-wrapper {
         display: flex;
-        gap: 10px;
+        gap: 30px;
+
+        @media (max-width: 721px) {
+          justify-content: center;
+        }
 
         button {
           color: green;
           border: 0;
           border-radius: 8px;
-          padding: 5px 10px;
-          font-size: 12px;
+          padding: 6px 12px;
+          font-size: 14px;
           font-weight: 600;
           transition: all 0.1s ease;
           cursor: pointer;
@@ -163,7 +192,7 @@ export const Container = styled.div`
       flex-direction: column;
       grid-column: 1;
       grid-row: 2;
-      gap: 10px;
+      gap: 20px;
 
       .title-wrapper {
         display: flex;
@@ -172,6 +201,7 @@ export const Container = styled.div`
 
         h3 {
           font-weight: 600;
+          font-size: 24px;
         }
 
         p {
@@ -179,12 +209,12 @@ export const Container = styled.div`
           align-items: center;
           color: green;
           cursor: pointer;
-          gap: 5px;
-          font-size: 12px;
+          gap: 10px;
+          font-size: 16px;
           font-weight: 500;
 
           .icon {
-            font-size: 14px;
+            font-size: 16px;
           }
         }
       }
@@ -192,20 +222,23 @@ export const Container = styled.div`
       .plants-wrapper {
         display: flex;
         justify-content: space-between;
+        gap: 20px;
 
         .plant {
           background: #cccccc80;
           padding: 10px;
           border-radius: 12px;
-          gap: 5px;
+          gap: 15px;
           display: flex;
           flex-direction: column;
           justify-content: end;
           position: relative;
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 3px 6px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 3px 6px -2px,
+            rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
           .icon {
             position: absolute;
+            font-size: 24px;
             top: 10px;
             right: 10px;
             z-index: 1;
@@ -213,13 +246,17 @@ export const Container = styled.div`
           }
 
           h4 {
-            font-size: 12px;
+            font-size: 16px;
             font-weight: 500;
             text-align: center;
           }
 
           .plant-img {
-            width: 100px;
+            width: 175px;
+
+            @media (max-width: 721px) {
+              width: 110px;
+            }
           }
         }
       }
@@ -231,7 +268,13 @@ export const Container = styled.div`
       grid-row: 3;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      column-gap: 10px;
+      column-gap: 20px;
+
+      @media (max-width: 721px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
 
       .top-sellers {
         display: flex;
@@ -245,6 +288,7 @@ export const Container = styled.div`
 
           h3 {
             font-weight: 600;
+            font-size: 24px;
           }
 
           p {
@@ -252,12 +296,12 @@ export const Container = styled.div`
             align-items: center;
             color: green;
             cursor: pointer;
-            gap: 5px;
-            font-size: 10px;
+            gap: 10px;
+            font-size: 14px;
             font-weight: 500;
 
             .icon {
-              font-size: 12px;
+              font-size: 14px;
             }
           }
         }
@@ -266,24 +310,23 @@ export const Container = styled.div`
           background: White;
           width: 100%;
           border-radius: 12px;
-          padding: 5px 10px;
+          padding: 10px 25px;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          gap: 5px;
 
           .users-wrapper {
             display: flex;
-            gap: 5px;
+            gap: 10px;
 
             img {
-              height: 20px;
+              height: 30px;
               border-radius: 50%;
             }
           }
 
           span {
-            width: 2px;
+            width: 4px;
             height: 100%;
             background-color: #cccccc80;
             border-radius: 14px;
@@ -295,19 +338,19 @@ export const Container = styled.div`
             grid-row: auto auto;
 
             .plants-sold {
-              font-size: 12px;
+              font-size: 16px;
               font-weight: 500;
               grid-column: 1/3;
               grid-row: 1;
               text-align: center;
             }
             .sellers {
-              font-size: 10px;
+              font-size: 12px;
               grid-column: 1;
               grid-row: 2;
             }
             .days {
-              font-size: 10px;
+              font-size: 12px;
               grid-column: 2;
               grid-row: 2;
             }
@@ -327,6 +370,7 @@ export const Container = styled.div`
 
           h3 {
             font-weight: 600;
+            font-size: 24px;
           }
 
           p {
@@ -334,12 +378,12 @@ export const Container = styled.div`
             align-items: center;
             color: green;
             cursor: pointer;
-            gap: 5px;
-            font-size: 10px;
+            gap: 10px;
+            font-size: 14px;
             font-weight: 500;
 
             .icon {
-              font-size: 12px;
+              font-size: 14px;
             }
           }
         }
@@ -348,24 +392,23 @@ export const Container = styled.div`
           background: White;
           width: 100%;
           border-radius: 12px;
-          padding: 5px 10px;
+          padding: 10px 25px;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          gap: 5px;
 
           .users-wrapper {
             display: flex;
-            gap: 5px;
+            gap: 10px;
 
             img {
-              height: 20px;
+              height: 30px;
               border-radius: 50%;
             }
           }
 
           span {
-            width: 2px;
+            width: 4px;
             height: 100%;
             background-color: #cccccc80;
             border-radius: 14px;
@@ -377,19 +420,19 @@ export const Container = styled.div`
             grid-row: auto auto;
 
             .plants-sold {
-              font-size: 12px;
+              font-size: 16px;
               font-weight: 500;
               grid-column: 1/3;
               grid-row: 1;
               text-align: center;
             }
             .sellers {
-              font-size: 10px;
+              font-size: 12px;
               grid-column: 1;
               grid-row: 2;
             }
             .days {
-              font-size: 10px;
+              font-size: 12px;
               grid-column: 2;
               grid-row: 2;
             }
@@ -403,36 +446,47 @@ export const Container = styled.div`
       grid-row: 1;
       padding: 10px 40px 10px 20px;
       border-radius: 18px;
-      width: 90%;
-      background: #cccccc80;
+      background: #e3f5d0;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       position: relative;
-      justify-self: center;
+      width: fit-content;
+
+      @media (max-width: 721px) {
+        gap: 10px;
+      }
 
       h3 {
         font-weight: 600;
+        font-size: 24px;
       }
 
       .stats {
         display: flex;
-        justify-content: space-between;
-        gap: 20px;
+        gap: 25px;
 
         .today-stat {
           display: flex;
           flex-direction: column;
           align-items: center;
-          font-size: 14px;
+          font-size: 20px;
           font-weight: 600;
           letter-spacing: -0.5px;
 
+          @media (max-width: 721px) {
+            font-size: 16px;
+          }
+
           strong {
-            font-size: 10px;
+            font-size: 14px;
             font-weight: 600;
             letter-spacing: -0.3px;
             color: green;
+
+            @media (max-width: 721px) {
+              font-size: 12px;
+            }
           }
         }
 
@@ -440,15 +494,23 @@ export const Container = styled.div`
           display: flex;
           flex-direction: column;
           align-items: center;
-          font-size: 14px;
+          font-size: 20px;
           font-weight: 600;
           letter-spacing: -0.5px;
 
+          @media (max-width: 721px) {
+            font-size: 16px;
+          }
+
           strong {
-            font-size: 10px;
+            font-size: 14px;
             font-weight: 600;
             letter-spacing: -0.3px;
             color: green;
+
+            @media (max-width: 721px) {
+              font-size: 12px;
+            }
           }
         }
 
@@ -456,15 +518,23 @@ export const Container = styled.div`
           display: flex;
           flex-direction: column;
           align-items: center;
-          font-size: 14px;
+          font-size: 20px;
           font-weight: 600;
           letter-spacing: -0.5px;
-          
+
+          @media (max-width: 721px) {
+            font-size: 16px;
+          }
+
           strong {
-            font-size: 10px;
+            font-size: 14px;
             font-weight: 600;
             letter-spacing: -0.3px;
             color: green;
+
+            @media (max-width: 721px) {
+              font-size: 12px;
+            }
           }
         }
       }
@@ -474,16 +544,15 @@ export const Container = styled.div`
         width: 4px;
         border: none;
         border-radius: 24px;
-        background-color: #CCC;
+        background-color: #00000010;
       }
 
       button {
         border: 0;
         border-radius: 8px;
-        padding: 3px 9px;
-        font-size: 12px;
+        font-size: 20px;
         font-weight: 500;
-        letter-spacing: -0.3px;
+        letter-spacing: -0.5px;
         cursor: pointer;
         background: transparent;
         display: flex;
@@ -493,11 +562,15 @@ export const Container = styled.div`
       }
 
       img {
-        width: 100px;
+        width: 140px;
         position: absolute;
         bottom: 0;
-        right: -50px;
+        right: -70px;
         z-index: 2;
+
+        @media (max-width: 721px) {
+          right: -80px;
+        }
       }
     }
 
@@ -515,6 +588,7 @@ export const Container = styled.div`
 
         h3 {
           font-weight: 600;
+          font-size: 24px;
         }
 
         p {
@@ -523,11 +597,11 @@ export const Container = styled.div`
           color: green;
           cursor: pointer;
           gap: 5px;
-          font-size: 10px;
+          font-size: 14px;
           font-weight: 500;
 
           .icon {
-            font-size: 12px;
+            font-size: 14px;
           }
         }
       }
@@ -537,7 +611,12 @@ export const Container = styled.div`
         padding: 10px 20px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         justify-content: space-between;
+
+        @media (max-width: 721px) {
+          gap: 20px;
+        }
 
         .user {
           display: grid;
@@ -546,7 +625,7 @@ export const Container = styled.div`
           column-gap: 10px;
 
           img {
-            width: 30px;
+            width: 50px;
             border-radius: 50%;
             grid-column: 1;
             grid-row: 1/3;
@@ -555,7 +634,7 @@ export const Container = styled.div`
           .user-name {
             grid-column: 2;
             grid-row: 1;
-            font-size: 12px;
+            font-size: 16px;
             font-weight: 600;
             letter-spacing: -0.3px;
           }
@@ -563,7 +642,7 @@ export const Container = styled.div`
           .order {
             grid-column: 2;
             grid-row: 2;
-            font-size: 10px;
+            font-size: 14px;
             font-weight: 500;
             letter-spacing: -0.3px;
           }
@@ -571,7 +650,7 @@ export const Container = styled.div`
           .time {
             grid-column: 3;
             grid-row: 1;
-            font-size: 10px;
+            font-size: 14px;
             font-weight: 500;
             letter-spacing: -0.3px;
           }

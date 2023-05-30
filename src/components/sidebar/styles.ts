@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Bg from '../../assets/bg.svg'
 
 export const Container = styled.aside`
   background: White;
@@ -8,9 +7,13 @@ export const Container = styled.aside`
   justify-content: space-between;
   gap: 20px;
   width: 250px;
-  padding: 15px 20px;
+  padding: 20px;
   border-radius: 18px 0px 0 18px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 0px 2.6px;
+
+  @media (max-width: 721px) {
+    display: none;
+  }
 
   .logo-wrapper {
     display: flex;
@@ -19,11 +22,11 @@ export const Container = styled.aside`
     cursor: pointer;
 
     .img {
-      width: 25px;
+      width: 30px;
     }
 
     .text {
-      font-size: 20px;
+      font-size: 25px;
       font-weight: 700;
       color: #73da77;
     }
@@ -35,7 +38,7 @@ export const Container = styled.aside`
     height: 100%;
 
     .menu-title {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: -.8px;
@@ -45,7 +48,7 @@ export const Container = styled.aside`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 10px;
+      gap: 25px;
       height: 100%;
 
       .item {
@@ -92,13 +95,13 @@ export const Container = styled.aside`
         }
 
         .item-icon {
-          font-size: 20px;
+          font-size: 22px;
           color: #00000080;
           transition: all .2s ease;
         }
 
         .item-title {
-          font-size: 16px;
+          font-size: 20px;
           font-weight: 600;
           color: #00000080;
           transition: all .2s ease;
@@ -109,14 +112,13 @@ export const Container = styled.aside`
 
   .help {
     background: lightgreen;
-    background: url(${Bg});
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     gap: 10px;
     border-radius: 12px;
-    padding: 20px 5px 10px 5px;
+    padding: 30px 5px 10px 5px;
 
     span {
       display: flex;
@@ -126,16 +128,16 @@ export const Container = styled.aside`
       background: lightgreen;
       border: 2px solid Black;
       outline: 8px solid White;
-      width: 25px;
-      height: 25px;
+      width: 30px;
+      height: 30px;
       top: -15px;
-      left: 50%;
+      left: 45%;
       border-radius: 50%;
       font-weight: 700;
     }
 
     h3 {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 700;
       letter-spacing: -.3px;
     }
@@ -149,10 +151,10 @@ export const Container = styled.aside`
     button {
       background: White;
       border: none;
-      padding: 10px 8px;
+      padding: 12px 10px;
       border-radius: 12px;
-      font-size: 12px;
-      font-weight: 500;
+      font-size: 14px;
+      font-weight: 600;
       transition: all .3s ease;
       cursor: pointer;
 

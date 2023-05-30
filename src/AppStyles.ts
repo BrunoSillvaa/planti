@@ -26,4 +26,8 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
   display: flex;
+
+  @media (max-width: 721px) {
+    overflow: scroll;
+  }
 `
