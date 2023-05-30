@@ -334,11 +334,12 @@ export const Container = styled.div`
 
           .sales {
             display: grid;
-            grid-column: 1fr 1fr;
+            grid-column: auto auto;
             grid-row: auto auto;
 
             .plants-sold {
               font-size: 16px;
+              font-size: 12px;
               font-weight: 500;
               grid-column: 1/3;
               grid-row: 1;

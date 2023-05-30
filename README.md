@@ -1,6 +1,6 @@
 <h1 align='center'>Planti.</h1>
 <h2 align='center'>Projeto de controle de vendas de planats criado usando como base o modelo do youtuber <a href='https://www.youtube.com/@IsraTech1'>IsraTech</a><h2/>
-<img src='./src/assets/screenshots.png' />
+<img src='./src/assets/screenshot.png' />
 <h1 align='center'>Tecnologias utilizadas</h1>
 <div align="center" >
     <img height="50" src="https://img.shields.io/badge/HTML5-rgba(0, 0, 0, 0)?style=for-the-badge&logo=html5&logoColor=E34F26&">
